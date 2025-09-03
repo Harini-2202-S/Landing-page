@@ -225,8 +225,13 @@ const LandingPage = () => {
             <p>© 2025 VIT Chennai | All Rights Reserved</p>
           </div>
           <div>
-            <h4>Connect</h4>
-            <p>Follow us on LinkedIn | Twitter</p>
+            <h4>Contact</h4>
+            <p> admin.chennai@vit.ac.in</p>
+            <p>Vellore Institute of Technology University,
+Vandalur Kelambakkam Road,
+Keelakotaiyur,
+Chennai, Tamil Nadu – 600 127</p>
+            
           </div>
         </div>
       </footer>

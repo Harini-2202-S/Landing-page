@@ -8,8 +8,8 @@ body {
 }
 
 .page-title {
-  display: flex;                 
-  align-items: center;           
+  display: flex;
+  align-items: center;
   justify-content: space-between;
   background: #0d2c54;
   color: white;
@@ -18,10 +18,11 @@ body {
   margin: 20px auto;
   max-width: 1425px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.075);
+  flex-wrap: wrap;
 }
 
 .title-text {
-  text-align: right;             
+  text-align: right;
 }
 
 .page-title h1 {
@@ -40,6 +41,44 @@ body {
 .logo {
   height: 70px;
   width: auto;
+}
+
+@media (max-width: 768px) {
+  .page-title {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .title-text {
+    text-align: center;
+    margin-top: 12px;
+  }
+
+  .page-title h1 {
+    font-size: 1.4rem;
+  }
+
+  .page-title p {
+    font-size: 0.85rem;
+  }
+
+  .logo {
+    height: 55px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title h1 {
+    font-size: 1.2rem;
+  }
+
+  .page-title p {
+    font-size: 0.8rem;
+  }
+
+  .logo {
+    height: 45px;
+  }
 }
 
 
