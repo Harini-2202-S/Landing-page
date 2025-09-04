@@ -33,29 +33,25 @@ const LandingPage = () => {
 
     try {
       const res = await fetch(
-        "https://script.google.com/macros/s/AKfycbzJg0Xmw0gZ1gQHIPI-g4TwWHUyUrrpG-kzx2jkiH8TTj5oPxdYN-tDTrTtmz0qFyvjRA/exec",
+        "https://script.google.com/macros/s/AKfycbzi1T2oGhw8bdmcf0BFLYudJBdJBGOS2e-bBiAJeUMcqf2btivzP0XPq6Q1EaQ-eP0R3w/exec",
         {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
           body: JSON.stringify(data),
         }
       );
 
-
       const result = await res.json();
       if (result.status === "success") {
         setResponseMsg({ type: "success", text: "Form submitted successfully!" });
-        setShowPopup(true); 
         setName("");
         setPhone("");
         setEmail("");
         setCity("");
         setMessage("");
+        setShowPopup(true); 
       } else {
         setResponseMsg({ type: "error", text: "Error submitting form: " + result.message });
-        setShowPopup(true);
+        setShowPopup(true); 
       }
     } catch (err) {
       setResponseMsg({ type: "error", text: "Network error: " + err.message });
@@ -220,10 +216,8 @@ const LandingPage = () => {
               professional commitments.
             </p>
           </div>
-          
         </div>
       </section>
-
 
       <section className="pedagogy">
         <div className="pedagogy-content">
@@ -315,18 +309,19 @@ const LandingPage = () => {
 
           <div className="form-consent"></div>
 
+          {/* Responsive button */}
           <button type="submit" disabled={loading}>
             {loading ? "Submitting..." : "SUBMIT"}
           </button>
         </form>
       </section>
 
-      {/* Popup */}
-      {showPopup && (
+      {/* Popup after submit */}
+      {showPopup && responseMsg && (
         <div className="popup-overlay">
-          <div className="popup">
-            <h3>{responseMsg?.type === "success" ? "Success" : "Error"}</h3>
-            <p>{responseMsg?.text}</p>
+          <div className={`popup ${responseMsg.type}`}>
+            <h3>{responseMsg.type === "success" ? "Success" : "Error"}</h3>
+            <p>{responseMsg.text}</p>
             <button onClick={() => setShowPopup(false)}>Close</button>
           </div>
         </div>
