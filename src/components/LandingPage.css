@@ -592,3 +592,84 @@ section h2 {
   }
 }
 
+/* Popup Overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* Popup Box */
+.popup {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  text-align: center;
+  animation: popupScale 0.3s ease;
+}
+
+/* Success & Error Header */
+.popup h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: #0d2c54;
+}
+
+.popup h3:before {
+  content: "✔ ";
+  color: #28a745; 
+  display: inline-block;
+}
+
+.popup h3:has(+ p:contains("Error")):before {
+  content: "✖ ";
+  color: #dc3545; 
+}
+
+/* Message Text */
+.popup p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Close Button */
+.popup button {
+  background: #0d2c54;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.popup button:hover {
+  background: #154a91;
+  transform: translateY(-2px);
+}
+
+/* Animation */
+@keyframes popupScale {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
