@@ -11,7 +11,12 @@ import {
   FaUniversity,
   FaGlobe,
   FaUsers,
+  FaLightbulb, 
+  FaBookOpen, 
+  FaFlask, 
+  FaHandshake 
 } from "react-icons/fa";
+
 
 const LandingPage = () => {
   const [name, setName] = useState("");
@@ -182,23 +187,23 @@ const LandingPage = () => {
             <p>NIRF 2025 Rankings (India): 14th best university overall in India.</p>
           </div>          
           <div className="card">
-            <FaUniversity className="icon" />
-            <h3>Ranked Excellence</h3>
+            <FaLightbulb className="icon" />
+            <h3>Top in Engineering & Innovation</h3>
             <p>Ranked among India’s top institutions for engineering and innovation.</p>
           </div>
           <div className="card">
-            <FaGlobe className="icon" />
-            <h3>Global Recognition</h3>
+            <FaBookOpen className="icon" />
+            <h3>Academic Excellence Worldwide</h3>
             <p>Accredited programs with international recognition and academic collaborations.</p>
           </div>
           <div className="card">
-            <FaIndustry className="icon" />
-            <h3>Cutting-edge Facilities</h3>
+            <FaFlask className="icon" />
+            <h3>Hands-On Innovation & Projects</h3>
             <p>Access to advanced laboratories, research hubs, and corporate projects.</p>
           </div>
           <div className="card">
-            <FaUsers className="icon" />
-            <h3>Industry Connect</h3>
+            <FaHandshake className="icon" />
+            <h3>Alumni & Industry Network</h3>
             <p>Strong alumni network and collaborations with global industries for real-world exposure.</p>
           </div>
         </div>
