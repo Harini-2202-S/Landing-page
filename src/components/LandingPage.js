@@ -66,15 +66,14 @@ const LandingPage = () => {
       {/* Page Title */}
       <div className="page-title">
         <img
-          src="https://vit.ac.in/wp-content/uploads/2023/06/VIT-40-logo-Combo-white.png"
+          src="https://chennai.vit.ac.in/wp-content/uploads/2025/04/VITcc-Logo-June25.png"
           alt="VIT Logo"
           className="logo"
         />
         <div className="title-text">
           <h1>VIT – CORPORATE PROGRAMS</h1>
           <p>
-            Empowering working professionals with world-class engineering
-            education
+            Empowering working professionals with world-class engineering education
           </p>
         </div>
       </div>
@@ -180,10 +179,30 @@ const LandingPage = () => {
           <div className="card">
             <FaUsers className="icon" />
             <h3>National Excellence Ranking</h3>
-            <p>NIRF 2024 Rankings (India): 10th best university overall in India.</p>
+            <p>NIRF 2025 Rankings (India): 14th best university overall in India.</p>
+          </div>          
+          <div className="card">
+            <FaUniversity className="icon" />
+            <h3>Ranked Excellence</h3>
+            <p>Ranked among India’s top institutions for engineering and innovation.</p>
+          </div>
+          <div className="card">
+            <FaGlobe className="icon" />
+            <h3>Global Recognition</h3>
+            <p>Accredited programs with international recognition and academic collaborations.</p>
+          </div>
+          <div className="card">
+            <FaIndustry className="icon" />
+            <h3>Cutting-edge Facilities</h3>
+            <p>Access to advanced laboratories, research hubs, and corporate projects.</p>
+          </div>
+          <div className="card">
+            <FaUsers className="icon" />
+            <h3>Industry Connect</h3>
+            <p>Strong alumni network and collaborations with global industries for real-world exposure.</p>
           </div>
         </div>
-      </section>
+      </section>      
 
       <section className="strength">
         <div className="strength-content">
@@ -210,7 +229,7 @@ const LandingPage = () => {
               contribute meaningfully to society.
             </p>
             <p>
-              Our offerings span B.Tech., M.Tech., MBA, Diplomas, and Professional
+              Our offerings span B.Tech., M.Tech., MBA, and Professional
               Certificate Programmes, carefully designed to strengthen expertise,
               accelerate career growth, and open new opportunities without pausing
               professional commitments.

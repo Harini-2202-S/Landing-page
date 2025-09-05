@@ -8,64 +8,84 @@ body {
 }
 
 .page-title {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   background: #0d2c54;
   color: white;
-  padding: 20px;      
+  padding: 0 20px;
   border-radius: 10px;
-  margin: 10px 15px;   
+  margin: 10px 15px;
   max-width: 1455px;
   min-height: 120px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.075);
-  position: relative;
 }
 
-/* Logo left corner */
+/* Logo on left (or top on small screens) */
 .page-title .logo {
-  max-height: 50px;
-  margin-right: auto;  
+  max-height: 70px;
+  z-index: 1;
 }
 
+/* Centered text */
 .page-title .title-text {
-  position: absolute;  
+  position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  font-size: 1.2rem;
-  font-weight: 600;
-  line-height: 1.1;
-  margin: 0;
 }
 
-.page-title .title-text h1,
-.page-title .title-text h2 {
-  margin-bottom: 4px;
+.page-title .title-text h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
 }
 
 .page-title .title-text p {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 0.95rem;
+  margin: 0;
+  font-size: 1rem;
 }
 
-/* Responsive tweak */
-@media (max-width: 600px) {
+/* Responsive tweaks */
+@media (max-width: 900px) {
   .page-title {
-    flex-direction: column;
-    padding: 6px 12px;
+    min-height: 150px;
+    padding: 10px;
   }
   .page-title .logo {
-    max-height: 40px;
-    margin: 0 auto 5px auto; 
+    max-height: 50px;
   }
+  .page-title .title-text h1 {
+    font-size: 1.4rem;
+  }
+  .page-title .title-text p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .page-title {
+    flex-direction: column;  
+    min-height: auto;
+    padding: 8px;
+  }
+
+  .page-title .logo {
+    margin-bottom: 10px;  
+  }
+
   .page-title .title-text {
-    position: static; 
+    position: static;
     transform: none;
-    font-size: 1rem;
-    line-height: 1.2;
-    margin-top: 5px;
+    width: 100%;
+  }
+
+  .page-title .title-text h1 {
+    font-size: 1.2rem;
+  }
+  .page-title .title-text p {
+    font-size: 0.8rem;
   }
 }
 
@@ -155,7 +175,7 @@ section h2 {
 }
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 25px;
   justify-content: center;
 }
@@ -185,6 +205,18 @@ section h2 {
   margin: 0 auto 20px;  
   display: block;        
   text-align: center;    
+}
+
+@media (max-width: 1200px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 700px) {
+  .card-grid {
+    grid-template-columns: 1fr; 
+  }
 }
 
 /* Strength Section */
