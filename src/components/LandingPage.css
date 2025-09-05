@@ -163,6 +163,25 @@ section h2 {
   color: #0d2c54;
   font-weight: 600;
 }
+@media (max-width: 1440px) {
+  .hero {
+    margin: 20px 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    margin: 20px 20px;
+    padding: 80px 20px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    margin: 15px 15px;
+    padding: 60px 15px;
+  }
+}
 
 /* Card Grid */
 .highlights {
@@ -303,6 +322,26 @@ section h2 {
   }
 }
 
+@media (max-width: 1440px) {
+  .strength {
+    margin: 20px 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .strength {
+    margin: 20px 20px;
+    padding: 80px 20px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .strength {
+    margin: 15px 15px;
+    padding: 60px 15px;
+  }
+}
+
 /* Pedagogy */
 .pedagogy {
   background: linear-gradient(135deg, #cae1f9, #e3ebf4);
@@ -405,6 +444,26 @@ section h2 {
   }
   .pedagogy-text p {
     font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 1440px) {
+  .pedagogy {
+    margin: 20px 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .pedagogy {
+    margin: 20px 20px;
+    padding: 80px 20px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .pedagogy {
+    margin: 15px 15px;
+    padding: 60px 15px;
   }
 }
 
@@ -523,6 +582,8 @@ section h2 {
   border-radius: 16px;
 }
 
+
+
 /* Enquiry Form */
 .enquiry-form {
   background: linear-gradient(135deg, #cae1f9, #e3ebf4);
@@ -621,6 +682,26 @@ section h2 {
   .form-row select {
     font-size: 0.85rem;
     padding: 10px 12px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .enquiry-form {
+    margin: 20px 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .enquiry-form {
+    margin: 20px 20px;
+    padding: 80px 20px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .enquiry-form {
+    margin: 15px 15px;
+    padding: 60px 15px;
   }
 }
 
