@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import corporateLife from "../images/corporate-life.avif";
 import pic from "../images/pic-3.png";
+import logo from "../images/final-vit-logo.png";
+import video from "../images/vit-video.mp4";
 import "./LandingPage.css";
 import {
   FaClock,
@@ -14,7 +16,10 @@ import {
   FaLightbulb, 
   FaBookOpen, 
   FaFlask, 
-  FaHandshake 
+  FaHandshake,
+  FaEnvelope,
+  FaPhone,
+  FaMapMarkerAlt
 } from "react-icons/fa";
 
 
@@ -71,14 +76,14 @@ const LandingPage = () => {
       {/* Page Title */}
       <div className="page-title">
         <img
-          src="https://chennai.vit.ac.in/wp-content/uploads/2025/04/VITcc-Logo-June25.png"
+          src={logo}
           alt="VIT Logo"
           className="logo"
         />
         <div className="title-text">
           <h1>VIT – CORPORATE PROGRAMS</h1>
-          <p>
-            Empowering working professionals with world-class engineering education
+          <p><i>Empowering working professionals with world-class engineering education</i>
+           
           </p>
         </div>
       </div>
@@ -281,7 +286,7 @@ const LandingPage = () => {
         <h2>Global Learning Environment at VIT</h2>
         <div className="video-container">
           <iframe
-            src="https://drive.google.com/file/d/1LsYTas4_HEebAEchcdze55XPinJWDYw5/preview"
+            src={video}
             title="Program Video"
             allow="autoplay"
           ></iframe>
@@ -360,13 +365,16 @@ const LandingPage = () => {
           </div>
           <div>
             <h4>Contact</h4>
-            <p> deancc.sponresearch@vit.ac.in</p>
-            <p>+91 73587 82571</p>
-            <p>
-              Vellore Institute of Technology University,
-              Vandalur Kelambakkam Road,
-              Keelakotaiyur,
-              Chennai, Tamil Nadu – 600 127
+            <p><FaEnvelope className="footer-icon" />deancc.sponresearch@vit.ac.in</p>            
+            <p><FaPhone className="footer-icon" />+91 73587 82571</p>
+            <p className="footer-address">
+              <FaMapMarkerAlt className="footer-icon" />
+              <span>
+                Vellore Institute of Technology University,<br />
+                Vandalur Kelambakkam Road,<br />
+                Keelakotaiyur,<br />
+                Chennai, Tamil Nadu – 600 127
+              </span>
             </p>
           </div>
         </div>

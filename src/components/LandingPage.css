@@ -88,9 +88,37 @@ body {
   }
 }
 
+/* Prevent overlap between 500px–900px */
+@media (max-width: 1160px) {
+  .page-title {
+    flex-direction: column;
+    min-height: auto;
+    padding: 10px;
+  }
+
+  .page-title .logo {
+    margin-bottom: 10px;
+  }
+
+  .page-title .title-text {
+    position: static;
+    transform: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .page-title .title-text h1 {
+    font-size: 1.3rem;
+  }
+
+  .page-title .title-text p {
+    font-size: 0.9rem;
+  }
+}
+
+
 /* Hero Section */
 .hero {
-  /* background: linear-gradient(135deg, #f9fbfd, #e3effc); */
   background: linear-gradient(135deg, #ccdbeb, #e3ebf4);
   min-height: 400px;
   padding: 100px 80px;   
@@ -544,7 +572,29 @@ section h2 {
   text-decoration: underline;
 }
 
-/* Responsive Design */
+.footer-icon {
+  margin-right: 8px;      
+  color: white;        
+  vertical-align: middle; 
+  font-size: 18px;        
+}
+
+.footer-address {
+  display: flex;
+  align-items: flex-start;
+}
+
+.footer-address .footer-icon {
+  margin-right: 8px;
+  font-size: 18px;
+  color: white;
+}
+
+.footer-address span {
+  display: block;
+  line-height: 1.5;
+}
+
 @media (max-width: 1024px) {
   .hero-grid {
     grid-template-columns: 1fr; 
