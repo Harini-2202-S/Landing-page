@@ -43,7 +43,7 @@ const LandingPage = () => {
 
     try {
       const res = await fetch(
-        "https://script.google.com/macros/s/AKfycbzi1T2oGhw8bdmcf0BFLYudJBdJBGOS2e-bBiAJeUMcqf2btivzP0XPq6Q1EaQ-eP0R3w/exec",
+        "https://script.google.com/macros/s/AKfycbyaQ59hNtuHZ03eVRhnmA3kTWzPiijYs0_iYpXnMy_HUIXMyd94sz2xaOGX8xNHdnGVOA/exec",
         {
           method: "POST",
           body: JSON.stringify(data),
